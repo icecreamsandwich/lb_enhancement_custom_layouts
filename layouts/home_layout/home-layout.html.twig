@@ -1,0 +1,72 @@
+{% set classes = [
+'layout',
+'layout--home-layout',
+] %}
+
+{% if content %}
+<!-- Header -->
+<div{{ attributes.addClass(classes) }}>
+  {% if content.header_left %}
+  <div {{ region_attributes.header_left.addClass('layout__region', 'layout__region--header_left' ) }}>
+    {{ content.header_left }}
+  </div>
+  {% endif %}
+  {% if content.header_right %}
+  <div {{ region_attributes.header_right.addClass('layout__region', 'layout__region--header_right' ) }}>
+    {{ content.header_right }}
+  </div>
+  {% endif %}
+
+  <!-- Top Banner -->
+  {% if content.top_banner %}
+  <div {{ region_attributes.top_banner.addClass('layout__region', 'layout__region--top_banner' ) }}>
+    {{ content.top_banner }}
+  </div>
+  {% endif %}
+
+  <!-- Content regions -->
+  {% if content.content_left %}
+  <div {{ region_attributes.content_left.addClass('layout__region', 'layout__region--content_left' ) }}>
+    {{ content.content_left }}
+  </div>
+  {% endif %}
+
+  {% if content.content_center %}
+  <div {{ region_attributes.content_center.addClass('layout__region', 'layout__region--content_center' ) }}>
+    {{ content.content_center }}
+  </div>
+  {% endif %}
+
+  {% if content.sidebar %}
+  <div {{ region_attributes.sidebar.addClass('layout__region', 'layout__region--sidebar' ) }}>
+    {{ content.sidebar }}
+  </div>
+  {% endif %}
+
+
+  <!-- CTA -->
+  {% if content.cta %}
+  <div {{ region_attributes.cta.addClass('layout__region', 'layout__region--cta' ) }}>
+    {{ content.cta }}
+  </div>
+  {% endif %}
+
+  <!-- Footer regions -->
+  {% if content.footer_left %}
+  <div {{ region_attributes.footer_left.addClass('layout__region', 'layout__region--footer_left' ) }}>
+    {{ content.footer_left }}
+  </div>
+  {% endif %}
+  {% if content.footer_middle %}
+  <div {{ region_attributes.footer_middle.addClass('layout__region', 'layout__region--footer_middle' ) }}>
+    {{ content.footer_left }}
+  </div>
+  {% endif %}
+
+  {% if content.footer_right %}
+  <div {{ region_attributes.footer_right.addClass('layout__region', 'layout__region--footer_right' ) }}>
+    {{ content.footer_right }}
+  </div>
+  {% endif %}
+  </div>
+  {% endif %}

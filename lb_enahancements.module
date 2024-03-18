@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for layoutbuilder_enhancements module.
+ */
+
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_access() for entity type "block".
+ * 
+ * Restrict the access to edit/ update the specific custom block type to administer users.
+ */
+function lb_enahancements_block_access(Block $block, $operation, AccountInterface $account)
+{
+    // The last condition is only needed if the trick from below is used with
+    // echo $block->getPluginId();exit;
+    \Drupal::logger('custom_layout')->notice("Operation:" . $operation. " On ". $block->getPluginId());
+    if (($operation == 'update' || $operation == 'edit') && $block->getPluginId() == 'custom_block_lb' && $block->id() !== NULL) {
+        \Drupal::logger('custom_layout')->notice("Operation:" . $operation. " On ". $block->getPluginId());
+        return AccessResult::allowedIfHasPermission($account, 'administer nodes');
+    }
+    return AccessResult::neutral();
+}

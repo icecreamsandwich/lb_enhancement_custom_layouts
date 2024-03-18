@@ -1,0 +1,8 @@
+home_layout:
+  css:
+    theme:
+      layouts/home_layout/home_layout.css: {}
+department_layout:
+  css:
+    theme:
+      layouts/department_layout/department_layout.css: {}

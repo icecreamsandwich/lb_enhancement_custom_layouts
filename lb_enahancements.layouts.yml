@@ -1,0 +1,61 @@
+home_layout:
+ label: 'Custom Layout for Home page CT'
+ path: layouts/home_layout
+ category: 'Custom Layouts'
+ template: home-layout
+ library: lb_enahancements/home_layout
+ default_region: content
+ icon_map:
+   - [header_left, header_right]
+   - [top_banner]
+   - [content_left, content_center, sidebar]
+   - [cta]
+   - [footer_left, footer_middle, footer_right]
+
+ regions:
+   header_left:
+     label: Header Left
+   header_right:
+     label: Header Right
+   top_banner:
+     label: Top Banner
+   content_left:
+     label: Content left
+   content_center:
+     label: Content center
+   sidebar:
+     label: Sidebar
+   footer_left:
+     label: Footer Left
+   footer_middle:
+     label: Footer Middle
+   footer_right:
+     label: Footer Right
+
+department_layout:
+ label: 'Custom Layout for Department CT'
+ path: layouts/department_layout
+ category: 'Custom Layouts'
+ template: department-layout
+ library: lb_enahancements/department_layout
+ default_region: content
+ icon_map:
+   - [header_left, header_right, header_right]
+   - [content, content, sidebar]
+   - [footer_left, footer_middle, footer_right]
+
+ regions:
+   header_left:
+     label: Header Left
+   header_right:
+     label: Header Right
+   content:
+     label: Content
+   sidebar:
+     label: Sidebar
+   footer_left:
+     label: Footer Left
+   footer_middle:
+     label: Footer Middle
+   footer_right:
+     label: Footer Right

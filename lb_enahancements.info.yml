@@ -1,0 +1,7 @@
+name: 'lb_enahancements'
+type: module
+description: 'Customize layout builder custom layouts for user experience'
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+ - layout_builder:layout_builder
