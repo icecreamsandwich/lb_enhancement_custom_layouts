@@ -37,9 +37,10 @@
     {{ content.footer_left }}
   </div>
   {% endif %}
+  
   {% if content.footer_middle %}
   <div {{ region_attributes.footer_middle.addClass('layout__region', 'layout__region--footer_middle' ) }}>
-    {{ content.footer_left }}
+    {{ content.footer_middle }}
   </div>
   {% endif %}
 

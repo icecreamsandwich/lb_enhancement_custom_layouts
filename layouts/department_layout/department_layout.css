@@ -21,8 +21,8 @@
 
     .layout--department-layout .layout__region--content {
       -webkit-box-flex: 0;
-      -ms-flex: 0 1 70%;
-      flex: 0 1 70%;
+      -ms-flex: 0 1 60%;
+      flex: 0 1 60%;
     }
    
     .layout--department-layout .layout__region--sidebar {
